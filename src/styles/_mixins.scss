@@ -1,0 +1,83 @@
+@use "_colors" as c;
+@use "_fonts" as ff;
+
+@mixin mobile {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 481px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin btn {
+  background: c.$black;
+  color: white;
+  border: none;
+  padding: 22.5px 0 24px 32px;
+  font-family: ff.$font-title;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: flex-start;
+  &:hover {
+    background-color: c.$copper;
+    span {
+      background-color: c.$black;
+    }
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+  span {
+    background-color: c.$copper;
+    padding: 27px 24px 24px 24px;
+  }
+}
+
+@mixin btn-back {
+  background: c.$black;
+  color: white;
+  border: none;
+  padding: 19.5px 24px 24px 0;
+  font-family: ff.$font-title;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: flex-start;
+
+  &:hover {
+    background-color: c.$copper;
+    span {
+      background-color: c.$black;
+    }
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+  span {
+    background-color: c.$copper;
+    padding: 24px 24px 24px 27px;
+  }
+}
